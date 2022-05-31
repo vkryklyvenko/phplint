@@ -208,7 +208,7 @@ class LintCommand extends Command
         if ($fileCount <= 0) {
             $output->writeln('<info>Could not find files to lint</info>');
 
-            return 0;
+            return 1;
         }
 
         $errors = $this->executeLint($linter, $input, $output, $fileCount);
